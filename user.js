@@ -39,7 +39,7 @@ window.onload=function(){
         }
 
         function isPassword(password){
-            if (!password.match("/[a-z+A-z+0-9+]{8,}$/")) {
+            if (!password.match("^(?=.[a-z])(?=.[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$")) {
                 return true;
             }
         }
