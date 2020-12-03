@@ -1,12 +1,18 @@
+<?php $query = $conn->query('SELECT * FROM issues');?>
 
-<?php if($status=="go"):?>
-<!--a query is made to get all items from the table-->
-<?php $query = $conn->query('SELECT * FROM StationVotes');?>
-<!--retrieves data quiered from the database-->
 <?php $results = $query->fetchAll(PDO::FETCH_ASSOC);?>
 
+
 <html>
+    <head>
+    <script src="home.js" type="text/javascript"></script>
+    </head>
     <body>
+        <div>
+            <button id = "all"> ALL</button>
+            <button id = "open"> OPEN </button>
+            <button id = "mytickets"> MY TICKETS </button> 
+        </div>
         <div>
             <ul>
                 <li>All</li>
@@ -38,4 +44,3 @@
         </div>
         </body>
 </html>
-<?php endif; ?>
