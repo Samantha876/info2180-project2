@@ -33,15 +33,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
 
-    $firstname= $_POST['firstname'];
-    $lastname= $_POST['lastname'];
-    $password= $_POST['password'];
-    $email= $_POST['email'];
-
-    $firstname= filter_input(INPUT_POST, $firstname, FILTER_SANITIZE_STRING);
-    $lastname= filter_input(INPUT_POST, $lastname, FILTER_SANITIZE_STRING);
-    $password= filter_input(INPUT_POST, $password, FILTER_SANITIZE_STRING);
-    $email= filter_input(INPUT_POST, $email, FILTER_SANITIZE_STRING);
+    $firstname= filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING);
+    $lastname= filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
+    $password= filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+    $email= filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
 
     $stmt = $conn->prepare("INSERT INTO users (id,firstname,lastname,password,email,date_joined) VALUES (:firstname,:lastname,password_hash(:password, PASSWORD_DEFAULT),:email)");
 
