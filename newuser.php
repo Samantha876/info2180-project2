@@ -8,7 +8,7 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 
-require_once 'connect.php';
+require_once 'connection.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -30,6 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <?php   
+
+    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+
     $firstname= filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING);
     $lastname= filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
     $password= filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
