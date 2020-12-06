@@ -1,12 +1,26 @@
 <?php
+if (!isset($_SESSION)){
+    session_start();
+$host = 'localhost';
+$username = 'admin';
+$password = 'password123';
+$dbname = 'schemadb';
+$user='root';
+$pass='';
 
-require_once 'dbconfig.php';
 
-try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
-    echo "Connected to $dbname at $host successfully.";
-    
-} catch (PDOException $pe) {
-    die("Could not connect to the database");
+    $conn = new mysqli($host,$user, $pass);
+   if($conn->connect_error)
+   {
+       die("can't connect");
+   }
+   else{
+    $sql = "use schemadb;";
+    $conn->prepare($sql);
+    $conn->query($sql);
+   }
+}
+else{
+
 }
 ?>
