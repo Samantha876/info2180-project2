@@ -1,27 +1,35 @@
-<?php $query = $conn->query('SELECT * FROM issues');?>
 
-<?php $results = $query->fetchAll(PDO::FETCH_ASSOC);?>
+
+<?php 
+
+include('connection.php');
+$query = mysqli_query($conn, 'SELECT * FROM issues');?>
+
+<?php $results = $query?>
 
 
 <html>
     <head>
     <script src="home.js" type="text/javascript"></script>
+    <link href="issue.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
-        <div>
+        <div> 
+            <div class='line1'><div class='Istitle'><h2>Issues</h2></div>
+            <div class='newisb'><button> Create New Issue</button></div>
+        </div>
+        <div class='Ifilter'>
+            <h4>Filter by:</h4>
             <button id = "all"> ALL</button>
             <button id = "open"> OPEN </button>
-            <button id = "mytickets"> MY TICKETS </button> 
+            <button id = "mytickets"> MY TICKETS </button>
+        </div> 
         </div>
-        <div>
-            <ul>
-                <li>All</li>
-                <li>Open</li>
-                <li>My Tickets</li>
-            </ul>
+        
+            
     <table>
         <thead>
-            <tr>
+            <tr class='Iheading'>
                 <th>Title</th>
                 <th>Type</th>
                 <th>Status</th>
@@ -32,7 +40,7 @@
         <tbody>
         <?php foreach ($results as $row):?>
             <tr>
-                <td><?php echo $row['title']; ?></td>
+                <td>#<?php echo $row['id'].' '.$row['title']; ?></td>
                 <td><?php echo $row['type']; ?></td>
                 <td><?php echo $row['status']; ?></td>
                 <td><?php echo $row['assigned_to'];?></td>

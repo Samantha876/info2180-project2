@@ -97,7 +97,7 @@ h1{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     grid-template-rows: 1fr  ;
-    gap:10px;
+    grid-gap:10px;
     padding: 10px;
     box-sizing: border-box;
 }
@@ -182,3 +182,57 @@ ul li a:hover{
     box-sizing: border-box;
     font-size: 14px;
 }
+.issBody{
+    display:flex;
+}
+.des{
+    flex:70%;
+}
+.side{
+    flex:30%;
+    
+}
+.sidebox{
+    background-color:lightgray;
+}
+.line1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Istitle{
+    
+    
+}
+
+
+.newisb{
+   
+}
+.newisb button{
+  height: 40px;
+  width: 140px;
+  background-color: green;
+}
+
+.Ifilter{
+    display: flex;
+    width: 25%;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.Ifilter button{
+    height: 25px;
+  width: 80px;
+  font-size: 10px;
+  border: none;
+  background-color: white;
+}
+th, td{
+    text-align: left;
+}
+.Iheading{
+    background-color: lightgray;
+}
+th {width:200px;}

@@ -4,7 +4,8 @@
         <meta charset="utf-8">
 		<title>BugMe Issue Tracker</title>
 		<link href="issue.css" type="text/css" rel="stylesheet" />
-		<script src="issue.js" type="text/javascript"></script>
+        <script src="issue.js" type="text/javascript"></script>
+        <script src="fulljob.js" type="text/javascript"></script>
 	</head>
 
 	<body>
@@ -16,25 +17,17 @@
             <div class ="navigation">
               <nav>  
                 <ul>
-                   <li><a href= "#">Home</a></li>
-                   <li><a href= "newuser.html">New user</a></li>
+                   <li><a href= "home.php">Home</a></li>
+                   <li><a  href= "newuser.html">New user</a></li>
                    <li><a href= "newissue.html">New Issue</a></li>
                    <li><a href= "index.html">Logout</a></li>
+                   
                 </ul>
             </nav>
             <main>
             </div>
-			<div class ="register">
-            <div class="registerform">
-                <h2>New User</h2>
-				<form class="Registration-form">
-                <input type="text" placeholder=" Firstname " />
-                <input type="text" placeholder=" Lastname " />
-                <input type="text" placeholder=" Password">
-				<input type="text" placeholder=" E-mail " />
-				<button>Submit</button>
-                </form>
-			</div>
+			<div class ="register"><!--Override this div for ajax implementation-->
+            
             </div>
             
 				
