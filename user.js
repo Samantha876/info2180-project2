@@ -1,5 +1,31 @@
 window.onload=function(){
     var form= document.getElementById("form");
+    
+    var home= document.getElementById("home");
+    var user= document.getElementById("user");
+    var issue= document.getElementById("issue");
+    var index= document.getElementById("index");
+    httpRequest= new XMLHttpRequest();
+    
+        user.addEventListener("click",function(e){
+        e.preventdefault();
+        var url="newuser.php";
+        httpRequest.onreadystatechange= load();
+        httpRequest.open('GET',url);
+        httpRequest.send();
+    });
+     
+        function load(){
+            if (httpRequest.readyState===XMLHttpRequest.DONE){
+                if (httpRequest.status===200){
+                    var response= httpRequest.responseText;
+                    var result=document.getElementbyId("register");
+                    result.innerHTML=response;
+                }else{
+                alert("The was an error with this request");}
+                }
+        }
+
 
     form.addEventListener("submit",(e)=>{
         e.preventDefault();
