@@ -1,12 +1,12 @@
 <?php
 include('connection.php');
 
-$id=1;//$_POST('1');
+$id=$_POST('idVal');
 
 $issql="SELECT * FROM issues WHERE id = $id";
-$usql="SELECT * FROM users";
+
 $Iquery=$conn->query($issql);
-$Uquery=$conn->query($usql);
+
  ?>  
  <!DOCTYPE html> 
 <html> 

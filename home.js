@@ -18,4 +18,11 @@ window.onload=function(){
 
     });
 
+
+    var issueB=document.getElementById('issue');
+    
+    issueB.addEventListener('click', function(){
+        var idVal=issueB.innerHTML;
+        console.log(idVal, 'jn');
+    });
 }

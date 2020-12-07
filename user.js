@@ -4,10 +4,10 @@ window.onload=function(){
     form.addEventListener("submit",(e)=>{
         e.preventDefault();
 
-        var firstname = document.getElementById('firstname');
-        var lastname = document.getElementById('lastname');
-        var password = document.getElementById('password');
-        var email = document.getElementById('email');
+        var firstname = document.getElementById('firstname_regform');
+        var lastname = document.getElementById('lastname_regform');
+        var password = document.getElementById('password_regform');
+        var email = document.getElementById('email_regform');
         var status="ok";
 
         if (isValid(firstname.value.trim())) {
@@ -39,13 +39,13 @@ window.onload=function(){
         }
 
         function isPassword(password){
-            if (!password.match("^(?=.[a-z])(?=.[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$")) {
+            if (!password.match("^(?=.*\d)(?=.*[A-Z])(?=.*[0-9])(?=.*[a-zA-Z0-9]).{8,}$")) {
                 return true;
             }
         }
 
         function isEmail(email) {
-            if(!email.match("/^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/")){
+            if(!email.match("^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$")){
                 return true;
             }
 

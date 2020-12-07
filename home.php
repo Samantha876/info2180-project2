@@ -7,7 +7,7 @@ $query = mysqli_query($conn, 'SELECT * FROM issues');?>
 
 <?php $results = $query?>
 
-
+<!DOCTYPE html>
 <html>
     <head>
     <script src="home.js" type="text/javascript"></script>
@@ -40,13 +40,17 @@ $query = mysqli_query($conn, 'SELECT * FROM issues');?>
         <tbody>
         <?php foreach ($results as $row):?>
             <tr>
-                <td>#<?php echo $row['id'].' '.$row['title']; ?></td>
+                <td>#<button><?php echo $row['id'];?></button> <?php echo' '.$row['title']; ?></td>
                 <td><?php echo $row['type']; ?></td>
                 <td><?php echo $row['status']; ?></td>
                 <td><?php echo $row['assigned_to'];?></td>
                 <td><?php echo $row['created'];?></td>
             <tr>
+                <form id='issue'> 
+                    <input type='hidden' value= <?php echo $row['id'];?>>
+                </from>
         <?php endforeach;?>
+        
         </tbody>
     </table>
         </div>
