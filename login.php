@@ -9,16 +9,15 @@ function userLogin($email, $password) {
 }
 
 function checkLogin($email, $password) {
-    $connect = new PDO('mysql:host=localhost;dbname=schema;', 'root', 'password');
-    $checkLoginQuery = ("SELECT `ID`, `firstname`, `lastname` FROM `users` WHERE `username`='$email'");
+    $connect = new PDO('mysql:host=localhost;dbname=schemab;', 'root', 'password');
+    $checkLoginQuery = ("SELECT `id`, `firstname`, `lastname` FROM `users` WHERE `username`='$email'");
     $stmt = $connect -> query($checkLoginQuery);
     $result = $stmt -> fetch(PDO:: FETCH_ASSOC);
     if ($result) {
-        $_SESSION["user_id"] = $result['ID'];
+        $_SESSION["user_id"] = $result['id'];
         $_SESSION["firstname"] = $result['firstname'];
         $_SESSION["lastname"] = $result['lastname'];
-        header("Location: ../home.php"); // Not yet create just placed a name there I think 
-    }
+        header("Location: ../home.php"); 
     else {
         return false;
     }

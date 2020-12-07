@@ -1,20 +1,23 @@
-.body1{
+.body1 {
     background-image: url(BKGimage.jpg);
-    background-size:cover;
+    background-size: cover;
     background-position: center;
     height: 100vh;
 }
-h1{
+
+h1 {
     text-align: center;
     font-size: 100px;
     color: white;
 }
-.login{
+
+.login {
     width: 360px;
     padding: 10% 0 0;
     margin: auto;
 }
-.form{
+
+.form {
     position: relative;
     z-index: 1;
     background: #ffffff;
@@ -23,38 +26,43 @@ h1{
     padding: 45px;
     text-align: center;
 }
-.form input{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    outline: 1;
-    background: #f2f2f2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
+
+    .form input {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        outline: 1;
+        background: #f2f2f2;
+        width: 100%;
+        border: 0;
+        margin: 0 0 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    .form button {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: #4cafaa;
+        width: 100%;
+        border: 0;
+        padding: 15px;
+        color: #ffffff;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+        .form button:hover {
+            background: #1a4197;
+        }
+
+.register {
+    width: 300px;
+    padding: 10% 0 0;
+    margin: auto;
 }
-.form button{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: #4cafaa;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #ffffff;
-    font-size: 14px;
-    cursor: pointer;
-}
-.form button:hover{
-    background: #1a4197;
-}
-.register{
-        width: 300px;
-        padding: 10% 0 0;
-        margin: auto;
-}
-.registerform{
+
+.registerform {
     position: relative;
     z-index: 1;
     background: #ffffff;
@@ -63,92 +71,97 @@ h1{
     padding: 45px;
     text-align: center;
 }
-.registerform input{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    outline: 1;
-    background: #f2f2f2;
-    width: 200%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
 
-}
+    .registerform input {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        outline: 1;
+        background: #f2f2f2;
+        width: 200%;
+        border: 0;
+        margin: 0 0 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
 
-.registerform button{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: #4cafaa;
-    width: 45%;
-    border: 0;
-    padding: 15px;
-    color: #ffffff;
-    font-size: 14px;
-    cursor: pointer;
-    float: left;
-    
-}
-.registerform button:hover{
-    background: #1a4197;
-}
-.container{
+    .registerform button {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: #4cafaa;
+        width: 45%;
+        border: 0;
+        padding: 15px;
+        color: #ffffff;
+        font-size: 14px;
+        cursor: pointer;
+        float: left;
+    }
+
+        .registerform button:hover {
+            background: #1a4197;
+        }
+
+.container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 1fr  ;
-    grid-gap:10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
     padding: 10px;
     box-sizing: border-box;
 }
-.container div{
-    padding: 10px;
-    
-}
-.header{
+
+    .container div {
+        padding: 10px;
+    }
+
+.header {
     grid-column-start: 1;
     grid-column-end: 5;
     background-color: black;
     color: white;
 }
-.navigation{    
+
+.navigation {
     grid-column-start: 1;
     grid-column-end: 1;
-    background-color:lightgray;
+    background-color: lightgray;
     font-size: 10px;
 }
-.register{
+
+.register {
     grid-column-end: 3;
 }
-ul{
+
+ul {
     margin-left: -40px;
+}
 
-}
-ul li{
-    line-height: 35px;
-    list-style: none;
-    
-   
+    ul li {
+        line-height: 35px;
+        list-style: none;
+    }
 
-}
-ul li a{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-decoration: none;
-    font-size: larger;
-    color: black;
-    padding: 20px;
-    
-}
-ul li a:hover{
-    color: rgb(129, 117, 117)
-}
-.issueform textarea{
-    margin:0px; 
+        ul li a {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-decoration: none;
+            font-size: larger;
+            color: black;
+            padding: 20px;
+        }
+
+            ul li a:hover {
+                color: rgb(129, 117, 117)
+            }
+
+.issueform textarea {
+    margin: 0px;
     width: 552px;
-    height:132px;
+    height: 132px;
     background: #f2f2f2;
 }
-.issueform input{
+
+.issueform input {
     font-family: Georgia, 'Times New Roman', Times, serif;
     outline: 1;
     background: #f2f2f2;
@@ -159,7 +172,8 @@ ul li a:hover{
     box-sizing: border-box;
     font-size: 14px;
 }
-.issueform button{
+
+.issueform button {
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-transform: uppercase;
     outline: 0;
@@ -171,7 +185,8 @@ ul li a:hover{
     font-size: 14px;
     cursor: pointer;
 }
-.issueform select{
+
+.issueform select {
     font-family: Georgia, 'Times New Roman', Times, serif;
     outline: 1;
     background: #f2f2f2;
@@ -182,4 +197,65 @@ ul li a:hover{
     box-sizing: border-box;
     font-size: 14px;
 }
+
+.issBody {
+    display: flex;
+}
+
+.des {
+    flex: 70%;
+}
+
+.side {
+    flex: 30%;
+}
+
+.sidebox {
+    background-color: lightgray;
+}
+
+.line1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Istitle {
+}
+
+
+.newisb {
+}
+
+    .newisb button {
+        height: 40px;
+        width: 140px;
+        background-color: green;
+    }
+
+.Ifilter {
+    display: flex;
+    width: 25%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .Ifilter button {
+        height: 25px;
+        width: 80px;
+        font-size: 10px;
+        border: none;
+        background-color: white;
+    }
+
+th, td {
+    text-align: left;
+}
+
+.Iheading {
+    background-color: lightgray;
+}
+
+th {
+    width: 200px;
 }

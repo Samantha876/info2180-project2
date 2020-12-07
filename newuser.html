@@ -1,45 +1,45 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-	<head>
-        <meta charset="utf-8">
-		<title>BugMe Issue Tracker</title>
-		<link href="issue.css" type="text/css" rel="stylesheet" />
-		<script src="issue.js" type="text/javascript"></script>
-	</head>
+<head>
+    <meta charset="utf-8">
+    <title>BugMe Issue Tracker</title>
+    <link href="issue.css" type="text/css" rel="stylesheet" />
+    <script src="user.js" type="text/javascript"></script>
+</head>
 
-	<body>
-        <div class="container">
-        <div class= "header">BugMe Issue Tracker</div>
+<body>
+    <div class="container">
+        <div class="header">BugMe Issue Tracker</div>
 
-	
-		
-            <div class ="navigation">
-              <nav>  
+
+
+        <div class="navigation">
+            <nav>
                 <ul>
-                   <li><a href= "#">Home</a></li>
-                   <li><a href= "newuser.html">New user</a></li>
-                   <li><a href= "newissue.html">New Issue</a></li>
-                   <li><a href= "index.html">Logout</a></li>
+                    <li id="home"><a href="#">Home</a></li>
+                    <li id="user"><a href="newuser.html">New user</a></li>
+                    <li id="issue"><a href="newissue.html">New Issue</a></li>
+                    <li id="index"><a href="index.html">Logout</a></li>
                 </ul>
             </nav>
             <main>
-            </div>
-			<div class ="register">
-            <div class="registerform">
+        </div>
+        <div id="register">
+            <!--<div class="registerform">
                 <h2>New User</h2>
-				<form class="Registration-form">
-                <input type="text" placeholder=" Firstname " />
-                <input type="text" placeholder=" Lastname " />
-                <input type="text" placeholder=" Password">
-				<input type="text" placeholder=" E-mail " />
-				<button>Submit</button>
+                    <form id="form" class="Registration-form" action="newuser.php" method="post">
+                    <input id="firstname" type="text" name= "firstname" placeholder=" Firstname " />
+                    <input id="lastname" type="text" name="lastname" placeholder=" Lastname " />
+                    <input id="password" type="text" name="password" placeholder=" Password">
+                    <input id="email" type="text" name="email" placeholder=" E-mail " />
+                    <button id="button"> Submit</button>
                 </form>
-			</div>
-            </div>
-            
-				
-			
-		</main>
+            </div>-->
+        </div>
+
+
+
+        </main>
     </div>
-	</body>
+</body>
 </html>
