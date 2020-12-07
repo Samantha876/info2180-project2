@@ -50,9 +50,9 @@ h1{
     background: #1a4197;
 }
 .register{
-        width: 300px;
-        padding: 10% 0 0;
-        margin: auto;
+        width: 800px;
+       /* padding: 10% 0 0;
+        margin: auto;*/
 }
 .registerform{
     position: relative;
@@ -116,9 +116,12 @@ h1{
     grid-column-end: 1;
     background-color:lightgray;
     font-size: 10px;
+    flex: 20%;
 }
 .register{
     grid-column-end: 3;
+    flex: 80%;
+    padding-left: 40%;
 }
 ul{
     margin-left: -40px;
@@ -241,4 +244,13 @@ th {width:200px;}
     font-size: 10px;
   border: none;
   background-color: white;
+}
+.makeFlex{
+    display: flex;
+}
+.closed{
+    background-color: blue;
+}
+.progress{
+    background-color: green;
 }

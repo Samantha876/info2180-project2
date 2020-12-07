@@ -63,7 +63,7 @@ CREATE TABLE    users   (
 
 INSERT INTO users(id, password, email) VALUES (1,SHA1('password123'),'admin@project2.com');
 insert into users(id, firstname,lastname,password,email) values(2,'Mickey', 'Mouse',SHA1('passwordm'), 'mickeymouse@disney.com');
-insert into issues(title,description,type, priority,status,assigned_to,created_by) values ('Home screen','need to create a home screen','bug','high','open',2,1);
+insert into issues(title,description,type, priority,status,assigned_to,created_by) values ('Home screen','Need to create a proper home screen','bug','high','open',2,1);
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

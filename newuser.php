@@ -18,6 +18,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <?php if($admin=='admin@project2.com'):?>
+    <div class="container">
+        <div class= "header">BugMe Issue Tracker</div>
+
+	
+		<div class='makeFlex'>
+            <div class ="navigation">
+              <nav>  
+                <ul>
+                   <li><a href= "home.php">Home</a></li>
+                   <li><a  href= "newuser.php">New user</a></li>
+                   <li><a href= "newissue.html">New Issue</a></li>
+                   <li><a href= "index.html">Logout</a></li>
+                   
+                </ul>
+            </nav>
+            <main>
+            </div>
+			<div class ="register"><!--Override this div for ajax implementation-->
+            
+            </div>
     <div class="registerform">
             <h2>New User</h2>
                 <form id="form" class="Registration-form" action="adduser.php" method="POST">
@@ -28,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <button id="button"> Submit</button>
             </form>
     </div>
-
+</div>
     <?php  
     /*
     $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
